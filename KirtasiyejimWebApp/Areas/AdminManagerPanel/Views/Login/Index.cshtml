@@ -1,0 +1,46 @@
+﻿@model KirtasiyejimWebApp.Areas.AdminManagerPanel.Data.ManagerLoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Yönetici Giriş</title>
+    <link href="~/Areas/AdminManagerPanel/Assets/css/loginPage.css" rel="stylesheet" />
+    <link href="~/Areas/AdminManagerPanel/Assets/css/formControls.css" rel="stylesheet" />
+    <link href="~/Areas/AdminManagerPanel/Assets/plugins/fontawesome-6.5.1/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="panelTitle">
+            <h3>Yönetici Giriş</h3>
+        </div>
+        <div class="panelContent">
+            @using (Html.BeginForm())
+            {
+                <div class="row">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "formLabel" })
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "formTextbox", @placeholder="ornek@ornek.com" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "formValidationText" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "formLabel" })
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "formTextbox", @placeholder = "şifreniz" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "formValidationText" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.RememberMe, htmlAttributes: new { @class = "formLabel" })
+                    @Html.EditorFor(model => model.RememberMe, new { htmlAttributes = new { @class = "formTextbox" } })
+                </div>
+                <div class="row">
+                    <button type="submit" class="submitButton">Giriş Yap</button>
+                </div>
+            }
+        </div>
+
+    </div>
+</body>
+</html>

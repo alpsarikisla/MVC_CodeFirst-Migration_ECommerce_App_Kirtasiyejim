@@ -1,0 +1,36 @@
+﻿.row{
+    padding:10px 0;
+}
+.formLabel
+{
+    display:block;
+    color:#808080;
+    margin-bottom:7px;
+}
+.formTextbox {
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+    .formTextbox:focus {
+        outline: 1px solid teal;
+    }
+.formValidationText {
+    color: red;
+}
+.submitButton{
+    border:1px solid teal;
+    border-radius:5px;
+    padding:10px 0;
+    width:100%;
+    background-color:teal;
+    color:white;
+    font-weight:900;
+    font-size:14pt;
+    cursor:pointer;
+}
+    .submitButton:hover {
+        background-color: #03a9a9;
+    }

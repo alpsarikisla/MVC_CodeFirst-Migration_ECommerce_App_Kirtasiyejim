@@ -1,0 +1,28 @@
+﻿*,h1,h2,h3,h4,h5,h6{
+    margin:0;padding:0;
+}
+body {
+    background-image:url(../images/login_background.jpg);
+    background-size:cover;
+    font-family:Calibri;
+    color:#1b1b1b;
+}
+.container {
+    width: 320px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 20px;
+    min-height: 500px;
+    position:absolute;
+    Top: 50%;
+    Left:50%;
+    Transform: translate(-50%, -50%);
+}
+.panelTitle{
+    text-align:center;
+    border-bottom:2px solid teal;
+    padding:20px 0;
+}
+.panelContent {
+    padding: 20px 20px;
+}

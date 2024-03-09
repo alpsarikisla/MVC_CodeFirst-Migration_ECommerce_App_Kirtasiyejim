@@ -1,0 +1,145 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|c:\\users\\303\\documents\\github\\mvc_codefirst-migration_ecommerce_app_kirtasiyejim\\kirtasiyejimwebapp\\areas\\adminmanagerpanel\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|solutionrelative:kirtasiyejimwebapp\\areas\\adminmanagerpanel\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|c:\\users\\303\\documents\\github\\mvc_codefirst-migration_ecommerce_app_kirtasiyejim\\kirtasiyejimwebapp\\areas\\adminmanagerpanel\\assets\\css\\formcontrols.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|solutionrelative:kirtasiyejimwebapp\\areas\\adminmanagerpanel\\assets\\css\\formcontrols.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|c:\\users\\303\\documents\\github\\mvc_codefirst-migration_ecommerce_app_kirtasiyejim\\kirtasiyejimwebapp\\areas\\adminmanagerpanel\\assets\\css\\loginpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|solutionrelative:kirtasiyejimwebapp\\areas\\adminmanagerpanel\\assets\\css\\loginpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|c:\\users\\303\\documents\\github\\mvc_codefirst-migration_ecommerce_app_kirtasiyejim\\kirtasiyejimwebapp\\areas\\adminmanagerpanel\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|solutionrelative:kirtasiyejimwebapp\\areas\\adminmanagerpanel\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|c:\\users\\303\\documents\\github\\mvc_codefirst-migration_ecommerce_app_kirtasiyejim\\kirtasiyejimwebapp\\models\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|solutionrelative:kirtasiyejimwebapp\\models\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|c:\\users\\303\\documents\\github\\mvc_codefirst-migration_ecommerce_app_kirtasiyejim\\kirtasiyejimwebapp\\areas\\adminmanagerpanel\\adminmanagerpanelarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|solutionrelative:kirtasiyejimwebapp\\areas\\adminmanagerpanel\\adminmanagerpanelarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|c:\\users\\303\\documents\\github\\mvc_codefirst-migration_ecommerce_app_kirtasiyejim\\kirtasiyejimwebapp\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{694521C7-5ADF-4FC8-B1C2-FFEFFA888169}|KirtasiyejimWebApp\\KirtasiyejimWebApp.csproj|solutionrelative:kirtasiyejimwebapp\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 175,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "loginPage.css",
+              "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Assets\\css\\loginPage.css",
+              "RelativeDocumentMoniker": "KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Assets\\css\\loginPage.css",
+              "ToolTip": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Assets\\css\\loginPage.css",
+              "RelativeToolTip": "KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Assets\\css\\loginPage.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-09T12:11:38.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "formControls.css",
+              "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Assets\\css\\formControls.css",
+              "RelativeDocumentMoniker": "KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Assets\\css\\formControls.css",
+              "ToolTip": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Assets\\css\\formControls.css",
+              "RelativeToolTip": "KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Assets\\css\\formControls.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-09T11:21:59.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBUAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T10:31:03.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminManagerPanelAreaRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\AdminManagerPanelAreaRegistration.cs",
+              "RelativeDocumentMoniker": "KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\AdminManagerPanelAreaRegistration.cs",
+              "ToolTip": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\AdminManagerPanelAreaRegistration.cs",
+              "RelativeToolTip": "KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\AdminManagerPanelAreaRegistration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T10:27:15.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "KirtasiyejimWebApp\\Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "KirtasiyejimWebApp\\Migrations\\Configuration.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T09:58:28.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Manager.cs",
+              "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Models\\Manager.cs",
+              "RelativeDocumentMoniker": "KirtasiyejimWebApp\\Models\\Manager.cs",
+              "ToolTip": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Models\\Manager.cs",
+              "RelativeToolTip": "KirtasiyejimWebApp\\Models\\Manager.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T09:58:23.96Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 225,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\303\\Documents\\GitHub\\MVC_CodeFirst-Migration_ECommerce_App_Kirtasiyejim\\KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "KirtasiyejimWebApp\\Areas\\AdminManagerPanel\\Views\\Login\\Index.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-09T11:19:52.975Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
