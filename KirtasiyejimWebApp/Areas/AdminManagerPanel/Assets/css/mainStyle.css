@@ -1,0 +1,99 @@
+﻿*, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Calibri;
+    background-color: #F7F8FC;
+}
+
+.navBar {
+    min-height: 40px;
+    background-color: teal;
+    color: white;
+}
+
+.brand {
+    float: left;
+    width: 200px;
+    padding: 10px;
+}
+
+.userPanel {
+    float: right;
+    width: 180px;
+    padding: 10px;
+}
+
+    .userPanel a {
+        text-decoration: none;
+        margin-right: 10px;
+        color: white;
+    }
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subNavBarBase {
+    background-color: #e1e1e1;
+}
+
+.subNavBar {
+    min-height: 40px;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+    .menu a {
+        text-decoration: none;
+        color: teal;
+        display: table-cell;
+        padding: 10px;
+    }
+
+        .menu a li {
+        }
+
+.contentContainer {
+}
+
+.box {
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+    .box .content {
+        min-height: 600px;
+        padding: 10px 20px;
+    }
+
+    .box .title {
+        padding: 20px 20px;
+        border-bottom:1px solid silver;
+    }
+
+.table {
+    width: 100%;
+}
+
+    .table tr {
+    }
+
+        .table tr th {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eae9e9;
+            
+        }
+
+        .table tr td {
+            padding: 15px;
+            border-bottom: 1px solid #eae9e9;
+        }

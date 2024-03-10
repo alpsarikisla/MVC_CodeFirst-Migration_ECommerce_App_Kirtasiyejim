@@ -2,7 +2,7 @@
     margin:0;padding:0;
 }
 body {
-    background-image:url(../images/login_background.jpg);
+    background-image:url(../images/login_background2.jpg);
     background-size:cover;
     font-family:Calibri;
     color:#1b1b1b;
@@ -13,10 +13,13 @@ body {
     background-color: white;
     border-radius: 20px;
     min-height: 500px;
-    position:absolute;
+    position: absolute;
     Top: 50%;
-    Left:50%;
+    Left: 50%;
     Transform: translate(-50%, -50%);
+    -webkit-box-shadow: -1px 10px 22px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 22px -8px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 22px -8px rgba(0,0,0,0.75);
 }
 .panelTitle{
     text-align:center;
@@ -25,4 +28,14 @@ body {
 }
 .panelContent {
     padding: 20px 20px;
+}
+.pnl_uyari
+{
+    background-color:#ff7d7d;
+    color:white;
+    font-size:12pt;
+    font-weight:900;
+    border-radius:7px;
+    padding:15px;
+    margin-bottom:10px;
 }

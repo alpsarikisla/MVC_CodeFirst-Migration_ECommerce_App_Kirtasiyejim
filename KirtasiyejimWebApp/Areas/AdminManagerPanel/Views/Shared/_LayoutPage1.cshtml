@@ -1,0 +1,56 @@
+﻿@using KirtasiyejimWebApp.Models
+@{ 
+    Manager m = null;
+    if (Session["manager"] != null)
+    {
+        m = Session["manager"] as Manager;
+    }
+    else
+    {
+        Response.Redirect("~/AdminManagerPanel/Login/Index");
+    }
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Areas/AdminManagerPanel/Assets/css/mainStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navBar">
+        <div class="container">
+            <div class="brand">
+                <h3>Kırtasiye-jim Admin Panel</h3>
+            </div>
+            <div class="userPanel">
+                <a href="#">@m.NickName (@m.ManagerType.Name)</a>
+                <a href="#">Çıkış Yap</a>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <div class="subNavBarBase">
+        <div class="container">
+            <div class="subNavBar">
+                <ul class="menu">
+                    <a href="@Url.Action("Index","Home")">
+                    <li>Anasayfa</li></a>
+                    <a href="@Url.Action("Index","Category")">
+                    <li>Kategori İşlemleri</li></a>
+                    <a href="@Url.Action("Index","Product")">
+                    <li>Ürün İşlemleri</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      
+        <div class="contentContainer">
+            @RenderBody()
+           
+        </div>
+    </div>
+</body>
+</html>

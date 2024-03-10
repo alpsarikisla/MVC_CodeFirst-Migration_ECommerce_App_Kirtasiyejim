@@ -16,6 +16,7 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+           
             return View();
         }
         [HttpPost]

@@ -99,6 +99,7 @@
   <ItemGroup>
     <Content Include="Areas\AdminManagerPanel\Assets\css\formControls.css" />
     <Content Include="Areas\AdminManagerPanel\Assets\css\loginPage.css" />
+    <Content Include="Areas\AdminManagerPanel\Assets\css\mainStyle.css" />
     <Content Include="Areas\AdminManagerPanel\Assets\images\login_background.jpg" />
     <Content Include="Areas\AdminManagerPanel\Assets\plugins\fontawesome-6.5.1\css\all.css" />
     <Content Include="Areas\AdminManagerPanel\Assets\plugins\fontawesome-6.5.1\css\all.min.css" />
@@ -2179,6 +2180,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\AdminManagerPanel\AdminManagerPanelAreaRegistration.cs" />
+    <Compile Include="Areas\AdminManagerPanel\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\AdminManagerPanel\Controllers\HomeController.cs" />
     <Compile Include="Areas\AdminManagerPanel\Controllers\LoginController.cs" />
     <Compile Include="Areas\AdminManagerPanel\Data\ManagerLoginViewModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -2186,6 +2189,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Base\Entity.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\KirtasiyejimDBModel.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManagerType.cs" />
@@ -2248,6 +2252,9 @@
     <Content Include="Areas\AdminManagerPanel\Assets\plugins\fontawesome-6.5.1\webfonts\fa-solid-900.woff2" />
     <Content Include="Areas\AdminManagerPanel\Assets\plugins\fontawesome-6.5.1\webfonts\fa-v4compatibility.ttf" />
     <Content Include="Areas\AdminManagerPanel\Assets\plugins\fontawesome-6.5.1\webfonts\fa-v4compatibility.woff2" />
+    <Content Include="Areas\AdminManagerPanel\Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Areas\AdminManagerPanel\Views\Home\Index.cshtml" />
+    <Content Include="Areas\AdminManagerPanel\Views\Category\Index.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2258,7 +2265,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\AdminManagerPanel\Views\Shared\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>

@@ -13,5 +13,6 @@ namespace KirtasiyejimWebApp.Models
 
         public DbSet<ManagerType> ManagerTypes { get; set; }
         public DbSet<Manager> Managers { get; set; }
+        public DbSet<Category> Categories { get; set; }
     } 
 }

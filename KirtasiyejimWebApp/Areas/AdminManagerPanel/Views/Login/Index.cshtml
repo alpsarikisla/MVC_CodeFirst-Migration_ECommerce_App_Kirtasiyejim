@@ -1,4 +1,5 @@
 ﻿@model KirtasiyejimWebApp.Areas.AdminManagerPanel.Data.ManagerLoginViewModel
+    @using KirtasiyejimWebApp.Areas.AdminManagerPanel.Data
 @{
     Layout = null;
 }
@@ -21,6 +22,12 @@
         <div class="panelContent">
             @using (Html.BeginForm())
             {
+                if (ViewBag.hataMesaj != null)
+                {
+                    <div class="pnl_uyari">
+                        @ViewBag.hataMesaj
+                    </div>
+                }
                 <div class="row">
                     @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "formLabel" })
                     @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "formTextbox", @placeholder="ornek@ornek.com" } })
@@ -28,12 +35,12 @@
                 </div>
                 <div class="row">
                     @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "formLabel" })
-                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "formTextbox", @placeholder = "şifreniz" } })
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "formTextbox", @placeholder = "şifreniz", @value = "1234" } })
                     @Html.ValidationMessageFor(model => model.Password, "", new { @class = "formValidationText" })
                 </div>
                 <div class="row">
-                    @Html.LabelFor(model => model.RememberMe, htmlAttributes: new { @class = "formLabel" })
-                    @Html.EditorFor(model => model.RememberMe, new { htmlAttributes = new { @class = "formTextbox" } })
+                    @Html.LabelFor(model => model.RememberMe, htmlAttributes: new { @class = "chekLabel" })
+                    @Html.EditorFor(model => model.RememberMe, new { htmlAttributes = new { @class = "formCheckBox" } })
                 </div>
                 <div class="row">
                     <button type="submit" class="submitButton">Giriş Yap</button>
