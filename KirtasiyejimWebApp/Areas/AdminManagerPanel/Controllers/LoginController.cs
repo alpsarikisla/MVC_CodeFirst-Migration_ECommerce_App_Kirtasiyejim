@@ -44,6 +44,10 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
             }
             return View();
         }
-
+        public ActionResult LogOut()
+        {
+            Session["manager"] = null;
+            return RedirectToAction("Index", "Login");
+        }
     }
 }

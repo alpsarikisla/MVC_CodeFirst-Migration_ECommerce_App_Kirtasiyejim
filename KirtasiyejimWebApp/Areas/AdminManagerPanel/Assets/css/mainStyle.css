@@ -67,6 +67,7 @@ body {
     background-color: white;
     border-radius: 5px;
     margin-top: 20px;
+    color: dimgrey;
 }
 
     .box .content {
@@ -76,8 +77,11 @@ body {
 
     .box .title {
         padding: 20px 20px;
-        border-bottom:1px solid silver;
+        border-bottom: 1px solid silver;
     }
+
+        .box .title h3 {
+        }
 
 .table {
     width: 100%;
@@ -90,10 +94,58 @@ body {
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid #eae9e9;
-            
         }
 
         .table tr td {
             padding: 15px;
             border-bottom: 1px solid #eae9e9;
         }
+
+.eklebutton {
+    padding: 7px 15px;
+    border-radius: 5px;
+    background-color: teal;
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    float: right;
+}
+
+.tableButton {
+    padding: 7px;
+    text-decoration: none;
+    font-size: 9pt;
+    margin: 0px;
+   
+    float:left;
+}
+
+.change {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: forestgreen;
+    color: white;
+}
+
+.edit {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.delete {
+    background-color: red;
+    color: white;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.ozetKutu {
+    border: 1px solid silver;
+    border-bottom: 5px solid silver;
+    border-radius: 10px;
+    width: 260px;
+    margin: 10px;
+    padding: 10px;
+    min-height: 100px;
+    float: left;
+    box-sizing: border-box;
+}

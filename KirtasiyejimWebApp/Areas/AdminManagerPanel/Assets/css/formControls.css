@@ -23,12 +23,10 @@
 .submitButton{
     border:1px solid teal;
     border-radius:5px;
-    padding:10px 0;
-    width:100%;
+    padding:7px 15px;
     background-color:teal;
     color:white;
-    font-weight:900;
-    font-size:14pt;
+    font-size:12pt;
     cursor:pointer;
 }
     .submitButton:hover {
@@ -40,4 +38,26 @@
 .formCheckBox
 {
 
+}
+.backButton{
+    color:gray;
+    margin-left:20px;
+}
+.pnl_hata {
+    background-color: #ff7d7d;
+    color: white;
+    font-size: 12pt;
+    font-weight: 900;
+    border-radius: 7px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.pnl_basarili {
+    background-color: #9dff9c;
+    color: darkgreen;
+    font-size: 12pt;
+    font-weight: 900;
+    border-radius: 7px;
+    padding: 15px;
+    margin-bottom: 10px;
 }

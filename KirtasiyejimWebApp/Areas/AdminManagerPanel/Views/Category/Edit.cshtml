@@ -1,0 +1,53 @@
+﻿@model KirtasiyejimWebApp.Models.Category
+@{
+    ViewBag.Title = "Kategori Düzenle";
+    Layout = "~/Areas/AdminManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<div class="box">
+    <div class="title">
+       
+        <h3>Kategoriler <small style="font-weight:100"> Kategori Düzenle</small></h3>
+      
+    </div>
+    <div class="content">
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(model => model.ID)
+            @Html.HiddenFor(model => model.IsDeleted)
+            if (ViewBag.hata != null)
+            {
+                <div class="pnl_uyari">
+                    @ViewBag.hata
+                </div>
+            }
+            if (ViewBag.basarili != null)
+            {
+                <div class="pnl_basarili">
+                    @ViewBag.basarili
+                </div>
+            }
+            <div class="row">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "formLabel" })
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "formTextbox" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "formValidationText" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "formLabel" })
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "formTextbox" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "formValidationText" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "formLabel" })
+                @Html.EditorFor(model => model.IsActive, new { htmlAttributes = new { @class = "formCheckBox" } }) Aktif Kategori<small>(Eğer Seçilirse kategori yayınlanır)</small>
+                @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "formValidationText" })
+            </div>
+            <div class="row">
+                <button type="submit" class="submitButton">Kategori Düzenle</button><a href="@Url.Action("Index","Category")" class="backButton">Kategoriler listesine dön</a>
+            </div>
+        }
+    </div>
+</div>
+
+
