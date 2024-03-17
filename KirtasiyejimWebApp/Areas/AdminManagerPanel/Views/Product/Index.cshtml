@@ -1,0 +1,62 @@
+﻿@model IEnumerable<KirtasiyejimWebApp.Models.Product>
+@using KirtasiyejimWebApp.Models;
+@{
+    ViewBag.Title = "Ürünler";
+    Layout = "~/Areas/AdminManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="box">
+    <div class="title">
+        <a href="@Url.Action("Create","Product")" class="eklebutton">+ Ekle</a><h3>Ürünler <small style="font-weight:100"> Tüm Ürünler</small></h3>
+        <div style="clear:both"></div>
+    </div>
+    <div class="content">
+        <table class="table" cellpadding="0" cellspacing="0">
+            <tr>
+                <th>Resim</th>
+                <th>No</th>
+                <th>Isim</th>
+                <th>Kategori</th>
+                <th>Stok</th>
+                <th>Fiyat</th>
+                <th>Durum</th>
+                <th>Seçenekler</th>
+            </tr>
+            @foreach (Product item in Model)
+            {
+                <tr>
+                    <td><img src="~/Assets/ProductImages/@item.ListImageUrl" width="40" /></td>
+                    <td>@item.ID</td>
+                    <td>@item.Name</td>
+                    <td>
+                        @item.category.Name
+                    </td>
+                    <td>
+                        @item.Stock
+                    </td>
+                    <td>
+                        @item.Price ₺
+                    </td>
+                    <td>
+                        @if (item.IsActive)
+                        {
+                            <label>Aktif</label>
+                        }
+                        else
+                        {
+                            <label>Pasif</label>
+                        }
+                    </td>
+                    <td>
+                        <div>
+                            <a href="@Url.Action("ChangeStatus", "Product", new {id= item.ID})" class="tableButton change"><i class="fa fa-recycle"></i></a>
+                            <a href="@Url.Action("Edit","Product", new {id= item.ID})" class="tableButton edit"><i class="fa fa-edit"></i></a>
+                            <a href="@Url.Action("Delete","Product", new {id= item.ID})" class="tableButton delete"><i class="fa-regular fa-trash-can"></i></a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

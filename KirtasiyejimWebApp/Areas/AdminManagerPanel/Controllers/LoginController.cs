@@ -3,7 +3,9 @@ using KirtasiyejimWebApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 
 namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
@@ -16,7 +18,15 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-           
+            HttpCookie cookie = Request.Cookies["adminCookie"];
+            if (cookie != null)
+            {
+                string email = cookie["Email"].ToString();
+                string password = cookie["password"].ToString();
+                Manager m = db.Managers.FirstOrDefault(x => x.Email ==  email && x.Password == password);
+                Session["manager"] = m;
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
         [HttpPost]
@@ -29,6 +39,14 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
                 {
                     if (m.IsActive)
                     {
+                        if (model.RememberMe)
+                        {
+                            HttpCookie cookie = new HttpCookie("adminCookie");
+                            cookie["Email"] = model.Email;
+                            cookie["password"] = model.Password;
+                            cookie.Expires = DateTime.Now.AddDays(10);
+                            Response.Cookies.Add(cookie);
+                        }
                         Session["manager"] = m;
                         return RedirectToAction("Index", "Home");
                     }
@@ -46,6 +64,9 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
         }
         public ActionResult LogOut()
         {
+            HttpCookie cookie = Request.Cookies["adminCookie"];
+            cookie.Expires = DateTime.Now.AddDays(-1);
+            Response.Cookies.Add(cookie);
             Session["manager"] = null;
             return RedirectToAction("Index", "Login");
         }

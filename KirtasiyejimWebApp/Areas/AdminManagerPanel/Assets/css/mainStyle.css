@@ -149,3 +149,12 @@ body {
     float: left;
     box-sizing: border-box;
 }
+.sag {
+    width:570px;
+    float:left;
+}
+
+.sol {
+    width: 570px;
+    float: right;
+}

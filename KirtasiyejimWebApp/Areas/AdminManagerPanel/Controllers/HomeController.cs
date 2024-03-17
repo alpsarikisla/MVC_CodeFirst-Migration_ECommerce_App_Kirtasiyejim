@@ -13,7 +13,7 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
         public ActionResult Index()
         {
             ViewBag.kategorisayi = db.Categories.Count();
-            ViewBag.urunsayi =0;
+            ViewBag.urunsayi =db.Products.Count();
             ViewBag.uyesayi = 0;
             ViewBag.kazanc = 0;
             return View();

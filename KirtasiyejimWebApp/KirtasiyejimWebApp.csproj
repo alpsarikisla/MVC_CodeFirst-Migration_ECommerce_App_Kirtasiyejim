@@ -2184,6 +2184,7 @@
     <Compile Include="Areas\AdminManagerPanel\Controllers\CategoryController.cs" />
     <Compile Include="Areas\AdminManagerPanel\Controllers\HomeController.cs" />
     <Compile Include="Areas\AdminManagerPanel\Controllers\LoginController.cs" />
+    <Compile Include="Areas\AdminManagerPanel\Controllers\ProductController.cs" />
     <Compile Include="Areas\AdminManagerPanel\Data\ManagerLoginViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2194,6 +2195,7 @@
     <Compile Include="Models\KirtasiyejimDBModel.cs" />
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManagerType.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2258,6 +2260,8 @@
     <Content Include="Areas\AdminManagerPanel\Views\Category\Index.cshtml" />
     <Content Include="Areas\AdminManagerPanel\Views\Category\Create.cshtml" />
     <Content Include="Areas\AdminManagerPanel\Views\Category\Edit.cshtml" />
+    <Content Include="Areas\AdminManagerPanel\Views\Product\Create.cshtml" />
+    <Content Include="Areas\AdminManagerPanel\Views\Product\Index.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2268,6 +2272,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Assets\ProductImages\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,83 @@
+﻿@model KirtasiyejimWebApp.Models.Product
+@{
+    ViewBag.Title = "Kategori Ekle";
+    Layout = "~/Areas/AdminManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<div class="box">
+    <div class="title">
+        @*<a href="@Url.Action("Create","Category")" class="eklebutton">+ Ekle</a>*@
+        <h3>Ürünler <small style="font-weight:100"> Ürün Ekle</small></h3>
+        @*<div style="clear:both"></div>*@
+    </div>
+    <div class="content">
+        @using (Html.BeginForm("Create", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            if (ViewBag.hata != null)
+            {
+                <div class="pnl_hata">
+                    @ViewBag.hata
+                </div>
+            }
+            if (ViewBag.basarili != null)
+            {
+                <div class="pnl_basarili">
+                    @ViewBag.basarili
+                </div>
+            }
+            <div class="sag">
+                <div class="row">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "formLabel" })
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "formTextbox" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "formValidationText" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.Category_ID, htmlAttributes: new { @class = "formLabel" })
+                    @Html.DropDownList("Category_ID", null, htmlAttributes: new { @class = "formTextbox" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "formLabel" })
+                    @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "formTextbox" } })
+                    @Html.ValidationMessageFor(model => model.Price, "", new { @class = "formValidationText" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.Stock, htmlAttributes: new { @class = "formLabel" })
+                    @Html.EditorFor(model => model.Stock, new { htmlAttributes = new { @class = "formTextbox" } })
+                    @Html.ValidationMessageFor(model => model.Stock, "", new { @class = "formValidationText" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "formLabel" })
+                    @Html.EditorFor(model => model.IsActive, new { htmlAttributes = new { @class = "formCheckBox" } }) Aktif Ürün<small> (Eğer Seçilirse ürün yayınlanır)</small>
+                    @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "formValidationText" })
+                </div>
+            </div>
+            <div class="sol">
+                <div class="row">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "formLabel" })
+                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "formTextbox" } })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "formValidationText" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.ListImageUrl, htmlAttributes: new { @class = "formLabel" })
+                    <input type="file" name="ListImage" class="formTextbox" />
+                    @Html.ValidationMessageFor(model => model.ListImageUrl, "", new { @class = "formValidationText" })
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.ImageUrl, htmlAttributes: new { @class = "formLabel" })
+                    <input type="file" name="Image" class="formTextbox" />
+                    @Html.ValidationMessageFor(model => model.ImageUrl, "", new { @class = "formValidationText" })
+                </div>
+
+
+            </div>
+            <div style="clear:both"></div>
+
+            <div class="row">
+                <button type="submit" class="submitButton">Ürün Ekle</button><a href="@Url.Action("Index","Product")" class="backButton">Ürünler listesine dön</a>
+            </div>
+        }
+    </div>
+</div>
+
+

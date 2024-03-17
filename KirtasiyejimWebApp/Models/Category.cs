@@ -19,5 +19,6 @@ namespace KirtasiyejimWebApp.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
+        public virtual ICollection<Product> Products { get; set; }
     }
 }
