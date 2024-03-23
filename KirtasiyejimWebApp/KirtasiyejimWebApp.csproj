@@ -2175,6 +2175,7 @@
     <Content Include="Areas\AdminManagerPanel\Assets\plugins\fontawesome-6.5.1\svgs\solid\yen-sign.svg" />
     <Content Include="Areas\AdminManagerPanel\Assets\plugins\fontawesome-6.5.1\svgs\solid\yin-yang.svg" />
     <Content Include="Areas\AdminManagerPanel\Assets\plugins\fontawesome-6.5.1\svgs\solid\z.svg" />
+    <Content Include="Assets\ProductImages\none.png" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -2196,6 +2197,7 @@
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Models\ManagerType.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2262,6 +2264,7 @@
     <Content Include="Areas\AdminManagerPanel\Views\Category\Edit.cshtml" />
     <Content Include="Areas\AdminManagerPanel\Views\Product\Create.cshtml" />
     <Content Include="Areas\AdminManagerPanel\Views\Product\Index.cshtml" />
+    <Content Include="Areas\AdminManagerPanel\Views\Product\InsertImage.cshtml" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2272,7 +2275,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\ProductImages\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>

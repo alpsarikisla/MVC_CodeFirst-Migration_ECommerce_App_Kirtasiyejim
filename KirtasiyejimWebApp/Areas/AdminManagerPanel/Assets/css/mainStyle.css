@@ -132,6 +132,11 @@ body {
     color: white;
 }
 
+.editimage {
+    background-color: silver;
+    color: white;
+}
+
 .delete {
     background-color: red;
     color: white;
@@ -157,4 +162,42 @@ body {
 .sol {
     width: 570px;
     float: right;
+}
+.imageList{
+    float:left;
+    border:1px solid silver;
+    border-radius:10px;
+    padding:10px;
+    width:258px;
+    margin:5px;
+    text-align:center;
+}
+.imageListselected {
+    float: left;
+    border: 1px solid orangered;
+    border-radius: 10px;
+    padding: 10px;
+    width: 258px;
+    margin: 5px;
+    text-align: center;
+}
+.listimage
+{
+    width:100%;
+}
+.yapimageListButton {
+    padding: 5px 15px;
+    background-color: green;
+    color: white;
+    margin-right: 10px;
+    border-radius: 7px;
+    text-decoration:none;
+}
+.silimageListButton {
+    padding: 5px 15px;
+    background-color: red;
+    color: white;
+    margin-right: 10px;
+    border-radius: 7px;
+    text-decoration: none;
 }

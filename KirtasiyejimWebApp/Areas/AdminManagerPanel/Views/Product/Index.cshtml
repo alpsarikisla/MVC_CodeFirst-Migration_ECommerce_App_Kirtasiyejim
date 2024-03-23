@@ -25,7 +25,24 @@
             @foreach (Product item in Model)
             {
                 <tr>
-                    <td><img src="~/Assets/ProductImages/@item.ListImageUrl" width="40" /></td>
+                    <td>
+                        @if (item.ProductImages.Count != 0)
+                        {
+                            int count = item.ProductImages.Count(x => x.isListImage == true);
+                            if (count != 0)
+                            {
+                                <img src="~/Assets/ProductImages/@item.ProductImages.First(x=> x.isListImage == true).ImageUrl" width="40" />
+                            }
+                            else
+                            {
+                                <img src="~/Assets/ProductImages/none.png" width="40" />
+                            }
+                        }
+                        else
+                        {
+                            <img src="~/Assets/ProductImages/none.png" width="40" />
+                        }
+                    </td>
                     <td>@item.ID</td>
                     <td>@item.Name</td>
                     <td>
@@ -51,6 +68,7 @@
                         <div>
                             <a href="@Url.Action("ChangeStatus", "Product", new {id= item.ID})" class="tableButton change"><i class="fa fa-recycle"></i></a>
                             <a href="@Url.Action("Edit","Product", new {id= item.ID})" class="tableButton edit"><i class="fa fa-edit"></i></a>
+                            <a href="@Url.Action("InsertImage","Product", new {id= item.ID})" class="tableButton editimage"><i class="fa-regular fa-image"></i></a>
                             <a href="@Url.Action("Delete","Product", new {id= item.ID})" class="tableButton delete"><i class="fa-regular fa-trash-can"></i></a>
                         </div>
                     </td>

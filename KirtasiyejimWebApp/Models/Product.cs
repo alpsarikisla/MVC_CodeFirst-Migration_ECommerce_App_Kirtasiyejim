@@ -25,16 +25,6 @@ namespace KirtasiyejimWebApp.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        [Display(Name = "Liste Resim (150 X 200)")]
-        [StringLength(maximumLength:75)]
-        [DataType(DataType.ImageUrl)]
-        public string ListImageUrl { get; set; }
-
-        [Display(Name = "Resim (150 X 150)")]
-        [StringLength(maximumLength: 75)]
-        [DataType(DataType.ImageUrl)]
-        public string ImageUrl { get; set; }
-
         [Display(Name = "Fiyat")]
         [DataType(DataType.Currency)]
         public double Price { get; set; }
@@ -42,5 +32,7 @@ namespace KirtasiyejimWebApp.Models
         [Display(Name = "Stok")]
        
         public double Stock { get; set; }
+
+        public virtual ICollection<ProductImage> ProductImages { get; set; }
     }
 }

@@ -22,49 +22,15 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(Product model, HttpPostedFileBase ListImage, HttpPostedFileBase Image)
+        public ActionResult Create(Product model)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    bool isValidImage = true;
-                    string Listname = "";
-                    string Imagename = "";
-                    if (ListImage != null)
-                    {
-                        FileInfo fi = new FileInfo(ListImage.FileName);
-                        if (fi.Extension == ".jpg" || fi.Extension == ".png")
-                        {
-                            Listname = Guid.NewGuid().ToString() + fi.Extension;
-                            model.ListImageUrl = Listname;
-                        }
-                        else{isValidImage = false;}
-                    }
-                    else{ model.ListImageUrl = "listNone.png";}
-                    if (Image != null)
-                    {
-                        FileInfo fi = new FileInfo(Image.FileName);
-                        if (fi.Extension == ".jpg" || fi.Extension == ".png")
-                        {
-                            Imagename = Guid.NewGuid().ToString() + fi.Extension;
-                            model.ImageUrl = Imagename;
-                        }
-                        else { isValidImage = false; }
-                    }
-                    else{model.ImageUrl = "none.png";}
-                    if (isValidImage)
-                    {
-                        ListImage.SaveAs(Server.MapPath("~/Assets/ProductImages/") + Listname);
-                        Image.SaveAs(Server.MapPath("~/Assets/ProductImages/") + Imagename);
-                        db.Products.Add(model);
-                        db.SaveChanges();
-                        ViewBag.basarili = "Ürün Başarıyla Eklendi";
-                    }
-                    else
-                    {
-                        ViewBag.hata = "Resim Formatı Uygun Değil";
-                    }
+                    db.Products.Add(model);
+                    db.SaveChanges();
+                    ViewBag.basarili = "Ürün Başarıyla Eklendi";
                 }
                 catch
                 {
@@ -72,7 +38,60 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
                 }
             }
             ViewBag.Category_ID = new SelectList(db.Categories, "ID", "Name");
-            return View(model);
+            return RedirectToAction("InsertImage", "Product", new { id = model.ID });
+        }
+
+        [HttpGet]
+        public ActionResult InsertImage(int id)
+        {
+            Product p = db.Products.Find(id);
+            ViewBag.product = p;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult InsertImage(int id, HttpPostedFileBase Image)
+        {
+            bool isValidImage = true;
+            ProductImage model = new ProductImage();
+            FileInfo fi = new FileInfo(Image.FileName);
+            string ImageName = "";
+            if (fi.Extension == ".jpg" || fi.Extension == ".png")
+            {
+                ImageName = Guid.NewGuid().ToString() + fi.Extension;
+                model.ImageUrl = ImageName;
+            }
+            else { isValidImage = false; }
+
+            if (isValidImage)
+            {
+                Image.SaveAs(Server.MapPath("~/Assets/ProductImages/"+ ImageName));
+                model.Product_ID = id;
+                db.ProductImages.Add(model);
+                db.SaveChanges();
+                ViewBag.basarili = "Resim Eklendi";
+            }
+            else
+            {
+                ViewBag.hata = "Resim Formatı Uygun Değil";
+            }
+            return RedirectToAction("InsertImage", "Product", new { id = id });
+
+        }
+        public ActionResult KapakResmiYap(int id)
+        {
+            ProductImage pi = db.ProductImages.Find(id);
+            List<ProductImage> pilist = db.ProductImages.Where(x => x.Product_ID == pi.Product_ID).ToList();
+            foreach (ProductImage item in pilist)
+            {
+                ProductImage pi3 = db.ProductImages.Find(item.ID);
+                pi3.isListImage = false;
+                db.SaveChanges();
+            }
+           
+            ProductImage pi2 = db.ProductImages.Find(id);
+            pi2.isListImage = true;
+            db.SaveChanges();
+            return RedirectToAction("InsertImage", "Product", new { id = pi.Product.ID });
         }
         [HttpGet]
         public ActionResult Edit(int? id)

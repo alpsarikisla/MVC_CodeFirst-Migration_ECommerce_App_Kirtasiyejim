@@ -1,0 +1,85 @@
+﻿@model KirtasiyejimWebApp.Models.ProductImage
+@using KirtasiyejimWebApp.Models;
+@{
+    ViewBag.Title = "InsertImage";
+    Layout = "~/Areas/AdminManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+    Product p = ViewBag.product as Product;
+}
+
+
+<div class="box">
+    <div class="title">
+        <h3>Ürünler <small style="font-weight:100"> Ürün Ekle</small></h3>
+    </div>
+    <div class="content">
+
+        <div class="row">
+            <table class="table">
+                <tr>
+                    <td>Ürün ID:</td>
+                    <td>@p.ID</td>
+                </tr>
+                <tr>
+                    <td>Ürün Adı:</td>
+                    <td>@p.Name</td>
+                </tr>
+                <tr>
+                    <td>Kategori:</td>
+                    <td>@p.category.Name</td>
+                </tr>
+            </table>
+        </div>
+
+        @using (Html.BeginForm("InsertImage", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            if (ViewBag.hata != null)
+            {
+                <div class="pnl_hata">
+                    @ViewBag.hata
+                </div>
+            }
+            if (ViewBag.basarili != null)
+            {
+                <div class="pnl_basarili">
+                    @ViewBag.basarili
+                </div>
+            }
+            <div class="row">
+                <label class="formLabel">Resim Seçiniz</label>
+                <input type="file" name="Image" class="formTextbox" />
+            </div>
+            <div class="row">
+                <button type="submit" class="submitButton">Resim Ekle</button><a href="@Url.Action("Index","Product")" class="backButton">Ürünler listesine dön</a>
+            </div>
+        }
+
+        <hr />
+        @if (p.ProductImages.Count != 0)
+        {
+            foreach (ProductImage item in p.ProductImages)
+            {
+                string csssinif = "imageList";
+                if (item.isListImage)
+                {
+                    csssinif = "imageListselected";
+                }
+                <div class="@csssinif">
+                    <img src="~/Assets/ProductImages/@item.ImageUrl" class="listimage" />
+                    <div style="padding-top:20px;">
+                        @if (!item.isListImage)
+                        {
+                            <a href="@Url.Action("KapakResmiYap", "Product", new {id= item.ID})" class="yapimageListButton">Kapak Resmi Yap</a>
+                        }
+                        <a href="" class="silimageListButton">Sil</a>
+                    </div>
+                </div>
+            }
+            <div style="clear:both"></div>
+        }
+    </div>
+
+</div>
+
+
+
+

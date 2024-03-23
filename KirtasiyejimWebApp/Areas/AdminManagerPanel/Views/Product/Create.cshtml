@@ -58,18 +58,6 @@
                     @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "formTextbox" } })
                     @Html.ValidationMessageFor(model => model.Description, "", new { @class = "formValidationText" })
                 </div>
-                <div class="row">
-                    @Html.LabelFor(model => model.ListImageUrl, htmlAttributes: new { @class = "formLabel" })
-                    <input type="file" name="ListImage" class="formTextbox" />
-                    @Html.ValidationMessageFor(model => model.ListImageUrl, "", new { @class = "formValidationText" })
-                </div>
-                <div class="row">
-                    @Html.LabelFor(model => model.ImageUrl, htmlAttributes: new { @class = "formLabel" })
-                    <input type="file" name="Image" class="formTextbox" />
-                    @Html.ValidationMessageFor(model => model.ImageUrl, "", new { @class = "formValidationText" })
-                </div>
-
-
             </div>
             <div style="clear:both"></div>
 
