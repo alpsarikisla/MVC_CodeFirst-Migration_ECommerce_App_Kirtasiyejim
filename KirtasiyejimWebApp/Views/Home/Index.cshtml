@@ -1,0 +1,30 @@
+﻿@model IEnumerable<KirtasiyejimWebApp.Models.Product>
+@using KirtasiyejimWebApp.Models
+@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@foreach (Product item in Model)
+{
+    <div class="product">
+        <a href="" class="link">
+            <div class="productImage">
+                <img src="~/Assets/ProductImages/@item.ProductImages.First(x=> x.isListImage).ImageUrl" />
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="productInfo">
+                <h3 class="name"> @item.Name</h3>
+                <div class="category"> <small> Kategori: @item.category.Name</small><br /></div>
+                <h3 class="price">@item.Price <small style="font-weight:200"> ₺ KDV Dahil</small></h3> 
+                <div style="clear:both"></div>
+            </div>
+        </a>
+        <div class="cart">
+            <a href="">Sepete Ekle</a>
+        </div>
+    </div>
+}
+<div style="clear:both"></div>
+
+

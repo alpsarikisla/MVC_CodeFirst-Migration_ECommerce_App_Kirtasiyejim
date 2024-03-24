@@ -1,0 +1,7 @@
+﻿@model IEnumerable<KirtasiyejimWebApp.Models.Category>
+@using KirtasiyejimWebApp.Models
+
+@foreach (Category item in Model)
+{
+    <a href="@Url.Action("CategoryProducts","Home", new {id = item.ID})">@item.Name</a>
+}

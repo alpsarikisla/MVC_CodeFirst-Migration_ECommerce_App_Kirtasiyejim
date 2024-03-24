@@ -31,6 +31,7 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
                     db.Products.Add(model);
                     db.SaveChanges();
                     ViewBag.basarili = "Ürün Başarıyla Eklendi";
+                    return RedirectToAction("InsertImage", "Product", new { id = model.ID });
                 }
                 catch
                 {
@@ -38,7 +39,7 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
                 }
             }
             ViewBag.Category_ID = new SelectList(db.Categories, "ID", "Name");
-            return RedirectToAction("InsertImage", "Product", new { id = model.ID });
+            return View(model);
         }
 
         [HttpGet]

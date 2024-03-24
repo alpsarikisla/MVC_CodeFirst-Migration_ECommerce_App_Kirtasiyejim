@@ -17,7 +17,8 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel
             context.MapRoute(
                 "AdminManagerPanel_default",
                 "AdminManagerPanel/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index", id = UrlParameter.Optional },
+                new[] { "KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers" }
             );
         }
     }

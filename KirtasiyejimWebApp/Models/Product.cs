@@ -21,7 +21,6 @@ namespace KirtasiyejimWebApp.Models
         public string Name { get; set; }
 
         [Display(Name = "Açıklama")]
-        [StringLength(maximumLength: 500, ErrorMessage = "En fazla 500 karakter olmalıdır")]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>kırtasiyejim - @ViewBag.Title * Her zaman uygun fiyatlı kırtasiye ürünleri *</title>
+    <link href="~/Assets/css/MainStyle.css" rel="stylesheet" />
+    <link href="~/Assets/plugins/fontawesome-6.5.1/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="topnavbar">
+        <div class="container">
+            <a href="@Url.Action("Index","Home")" class="brand"> <h3>Kırtasiye-<span style="color:coral">jim</span></h3></a>
+            <small class="motto">Her zaman uygun fiyatlı kırtasiye ürünleri</small>
+            <div class="userandcart">
+                <a href=""><i class="fa fa-user-plus"></i> Üye Ol</a>
+                <a href=""><i class="fa fa-user"></i> Giriş Yap</a>
+                <a href=""><i class="fa fa-shopping-cart"></i> Sepet</a>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="container">
+            @Html.Action("_menuView","Menu")
+        </div>
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>

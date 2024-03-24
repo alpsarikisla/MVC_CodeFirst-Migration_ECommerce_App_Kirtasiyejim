@@ -1,0 +1,103 @@
+﻿*{
+    margin:0; padding:0;
+}
+
+body {
+    font-family:Calibri;
+}
+.topnavbar {
+    min-height:40px;
+   
+}
+.container
+{
+    width:1400px;
+    margin:0px auto; 
+}
+.navbar {
+    min-height: 40px;
+    background-color: steelblue;
+}
+.brand {
+    float: left;
+    padding: 15px;
+    padding-left:0;
+    color: steelblue;
+    text-decoration:none;
+    font-size:18pt;
+}
+.motto {
+    float: left;
+    padding: 28px 0px;
+    color: gray;
+}
+.userandcart {
+    width: 300px;
+    float: right;
+    padding: 25px 0px;
+}
+.userandcart a{
+    text-decoration:none;
+    color:coral;
+    padding:7px;
+    border:1px solid coral;
+    border-radius:5px;
+    margin:0px 5px;
+}
+    .userandcart a:hover{
+        color:white;
+        background-color:coral;
+    }
+.navbar .container{
+    padding-top:10px;
+}
+.navbar .container a {
+    padding-right:15px;
+    text-decoration: none;
+    color: white;
+}
+.product{
+    width:191px;
+    padding:10px;
+    border:1px solid silver;
+    border-radius:5px;
+    margin:10px;
+    text-decoration:none;
+    float:left;
+}
+    .product .productImage img{
+        width:100%;
+    }
+    .product .link {
+        text-decoration:none;
+    }
+    .product .productInfo
+    {
+        color:dimgray;
+    }
+        .product .productInfo .name {
+            padding: 10px 0;
+        }
+        .product .productInfo .category {
+            border-top: 1px solid silver;
+            border-bottom: 1px solid silver;
+            padding:10px 0;
+        }
+        .product .productInfo .price {
+            padding:15px 0 10px 0;
+            font-size:15pt;
+            font-weight:900;
+            color:black;
+        }
+        .product .cart {
+            margin-top: 10px;
+        }
+    .product .cart a {
+        display:block;
+        border-radius:3px;
+        color:white;
+        text-decoration:none;
+        padding:5px;
+        background-color:coral;
+        text-align:center;
+    }
