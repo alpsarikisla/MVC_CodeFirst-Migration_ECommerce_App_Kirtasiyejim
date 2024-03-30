@@ -3,5 +3,5 @@
 
 @foreach (Category item in Model)
 {
-    <a href="@Url.Action("CategoryProducts","Home", new {id = item.ID})">@item.Name</a>
+    <a href="@Url.Action("Index","Home", new {id = item.ID})">@item.Name</a>
 }

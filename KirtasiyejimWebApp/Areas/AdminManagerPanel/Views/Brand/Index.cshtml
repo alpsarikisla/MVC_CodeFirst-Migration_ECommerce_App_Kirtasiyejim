@@ -1,0 +1,49 @@
+﻿@model IEnumerable<KirtasiyejimWebApp.Models.Brand>
+@using KirtasiyejimWebApp.Models;
+@{
+    ViewBag.Title = "Markalar";
+    Layout = "~/Areas/AdminManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="box">
+    <div class="title">
+        <a href="@Url.Action("Create","Brand")" class="eklebutton">+ Ekle</a><h3>Marka <small style="font-weight:100"> Tüm Markalar</small></h3>
+        <div style="clear:both"></div>
+    </div>
+    <div class="content">
+        <table class="table" cellpadding="0" cellspacing="0">
+            <tr>
+                <th>No</th>
+                <th>Isim</th>
+                <th>Durum</th>
+                <th>Seçenekler</th>
+            </tr>
+            @foreach (Brand item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Name</td>
+                  
+                    <td>
+                        @if (item.IsActive)
+                        {
+                            <label>Aktif</label>
+                        }
+                        else
+                        {
+                            <label>Pasif</label>
+                        }
+                    </td>
+                    <td>
+                        <div>
+                            <a href="@Url.Action("ChangeStatus", "Brand", new {id= item.ID})" class="tableButton change"><i class="fa fa-recycle"></i></a>
+                            <a href="@Url.Action("Edit","Brand", new {id= item.ID})" class="tableButton edit"><i class="fa fa-edit"></i></a>
+                            <a href="@Url.Action("Delete","Brand", new {id= item.ID})" class="tableButton delete"><i class="fa-regular fa-trash-can"></i></a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

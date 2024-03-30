@@ -1,0 +1,46 @@
+﻿@model KirtasiyejimWebApp.Models.Brand
+@{
+    ViewBag.Title = "Marka Ekle";
+    Layout = "~/Areas/AdminManagerPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<div class="box">
+    <div class="title">
+        @*<a href="@Url.Action("Create","Category")" class="eklebutton">+ Ekle</a>*@
+        <h3>Markalar <small style="font-weight:100"> Marka Düzenle</small></h3>
+        @*<div style="clear:both"></div>*@
+    </div>
+    <div class="content">
+        @using (Html.BeginForm())
+        {
+            if (ViewBag.hata != null)
+            {
+                <div class="pnl_uyari">
+                    @ViewBag.hata
+                </div>
+            }
+            if (ViewBag.basarili != null)
+            {
+                <div class="pnl_basarili">
+                    @ViewBag.basarili
+                </div>
+            }
+            <div class="row">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "formLabel" })
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "formTextbox" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "formValidationText" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "formLabel" })
+                @Html.EditorFor(model => model.IsActive, new { htmlAttributes = new { @class = "formCheckBox" } }) Aktif Marka<small>(Eğer Seçilirse marka yayınlanır)</small>
+                @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "formValidationText" })
+            </div>
+            <div class="row">
+                <button type="submit" class="submitButton">Marka Düzenle</button><a href="@Url.Action("Index","Brand")" class="backButton">Markalar listesine dön</a>
+            </div>
+        }
+    </div>
+</div>
+
+

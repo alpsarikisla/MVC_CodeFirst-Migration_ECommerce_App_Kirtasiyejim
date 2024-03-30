@@ -1,7 +1,6 @@
 ﻿@model IEnumerable<KirtasiyejimWebApp.Models.Product>
 @using KirtasiyejimWebApp.Models
 @{
-    ViewBag.Title = "Anasayfa";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 @foreach (Product item in Model)
@@ -9,7 +8,22 @@
     <div class="product">
         <a href="" class="link">
             <div class="productImage">
-                <img src="~/Assets/ProductImages/@item.ProductImages.First(x=> x.isListImage).ImageUrl" />
+                @if (item.ProductImages.Count != 0)
+                {
+                    int count = item.ProductImages.Count(x => x.isListImage == true);
+                    if (count != 0)
+                    {
+                        <img src="~/Assets/ProductImages/@item.ProductImages.First(x=> x.isListImage == true).ImageUrl"  />
+                    }
+                    else
+                    {
+                        <img src="~/Assets/ProductImages/none.png" width="40" />
+                    }
+                }
+                else
+                {
+                    <img src="~/Assets/ProductImages/none.png" width="40" />
+                }
             </div>
         </a>
         <a href="" class="link">

@@ -1,6 +1,6 @@
 ﻿@model KirtasiyejimWebApp.Models.Product
 @{
-    ViewBag.Title = "Ürün Ekle";
+    ViewBag.Title = "Ürün Düzenle";
     Layout = "~/Areas/AdminManagerPanel/Views/Shared/_LayoutPage1.cshtml";
 }
 
@@ -8,12 +8,14 @@
 <div class="box">
     <div class="title">
         @*<a href="@Url.Action("Create","Category")" class="eklebutton">+ Ekle</a>*@
-        <h3>Ürünler <small style="font-weight:100"> Ürün Ekle</small></h3>
+        <h3>Ürünler <small style="font-weight:100"> Ürün Düzenle</small></h3>
         @*<div style="clear:both"></div>*@
     </div>
     <div class="content">
-        @using (Html.BeginForm("Create", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        @using (Html.BeginForm())
         {
+            @Html.HiddenFor(model => model.ID)
+            @Html.HiddenFor(model => model.IsDeleted)
             if (ViewBag.hata != null)
             {
                 <div class="pnl_hata">
@@ -32,7 +34,6 @@
                     @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "formTextbox" } })
                     @Html.ValidationMessageFor(model => model.Name, "", new { @class = "formValidationText" })
                 </div>
-               
                 <div class="row">
                     @Html.LabelFor(model => model.Category_ID, htmlAttributes: new { @class = "formLabel" })
                     @Html.DropDownList("Category_ID", null, htmlAttributes: new { @class = "formTextbox" })
@@ -67,7 +68,7 @@
             <div style="clear:both"></div>
 
             <div class="row">
-                <button type="submit" class="submitButton">Ürün Ekle</button><a href="@Url.Action("Index","Product")" class="backButton">Ürünler listesine dön</a>
+                <button type="submit" class="submitButton">Ürün Düzenle</button><a href="@Url.Action("Index","Product")" class="backButton">Ürünler listesine dön</a>
             </div>
         }
     </div>

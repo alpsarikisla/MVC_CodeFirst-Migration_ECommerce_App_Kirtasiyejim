@@ -11,9 +11,26 @@ namespace KirtasiyejimWebApp.Controllers
     {
         KirtasiyejimDBModel db = new KirtasiyejimDBModel();
         // GET: Home
-        public ActionResult Index()
+
+        public ActionResult Index(int? id)
         {
-            return View(db.Products.Where(x=> x.IsActive).ToList());
+            if (id != null)
+            {
+                string categoryName = db.Categories.Find(id).Name;
+                ViewBag.Title = categoryName;
+                return View(db.Products.Where(x => x.IsActive && x.Category_ID == id).ToList());
+            }
+            else
+            {
+                ViewBag.Title = "Anasayfa";
+                return View(db.Products.Where(x => x.IsActive).ToList());
+            }
+            
         }
+
+        //public ActionResult CategoryProducts(int id)
+        //{
+        //    return View(db.Products.Where(x => x.IsActive && x.Category_ID == id).ToList());
+        //}
     }
 }

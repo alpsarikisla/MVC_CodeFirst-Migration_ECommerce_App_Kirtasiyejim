@@ -19,6 +19,7 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
         public ActionResult Create()
         {
             ViewBag.Category_ID = new SelectList(db.Categories, "ID", "Name");
+            ViewBag.Brand_ID = new SelectList(db.Brands, "ID", "Name");
             return View();
         }
         [HttpPost]
@@ -97,11 +98,34 @@ namespace KirtasiyejimWebApp.Areas.AdminManagerPanel.Controllers
         [HttpGet]
         public ActionResult Edit(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return RedirectToAction("Index", "Product");
+            }
+            Product model = db.Products.Find(id);
+
+            ViewBag.Category_ID = new SelectList(db.Categories, "ID", "Name", model.Category_ID);
+            ViewBag.Brand_ID = new SelectList(db.Brands, "ID", "Name", model.Brand_ID);
+            return View(model);
         }
         [HttpPost]
         public ActionResult Edit(Product model)
         {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    ViewBag.basarili = "Ürün güncelleme başarılı";
+                }
+                catch
+                {
+                    ViewBag.hata = "Ürün güncellenirken bir hata oluştu";
+                }
+            }
+            ViewBag.Category_ID = new SelectList(db.Categories, "ID", "Name", model.Category_ID);
+            ViewBag.Brand_ID = new SelectList(db.Brands, "ID", "Name", model.Brand_ID);
             return View();
         }
         public ActionResult ChangeStatus(int? id)

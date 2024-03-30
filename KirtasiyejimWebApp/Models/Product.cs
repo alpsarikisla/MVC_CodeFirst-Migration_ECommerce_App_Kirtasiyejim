@@ -15,6 +15,10 @@ namespace KirtasiyejimWebApp.Models
         [ForeignKey("Category_ID")]
         public virtual Category category { get; set; }
 
+        public int Brand_ID { get; set; }
+        [ForeignKey("Brand_ID")]
+        public virtual Brand Brand { get; set; }
+
         [Display(Name = "Isim")]
         [Required(ErrorMessage = "Alan boş bırakılamaz")]
         [StringLength(maximumLength: 75, ErrorMessage = "En fazla 75 karakter olmalıdır")]
