@@ -1,0 +1,47 @@
+﻿@model IEnumerable<KirtasiyejimWebApp.Models.ShoppingCart>
+@using KirtasiyejimWebApp.Models
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div style=" margin-top: 50px;"></div>
+<h2>Sepetiniz</h2>
+<hr />
+<div style=" margin-top: 20px;"></div>
+<div class="cartDetailBase">
+
+    <table cellpadding="0" cellspacing="0" class="carttable">
+        <tr>
+            <th>Ürün Kodu</th>
+            <th>Ürün Adı</th>
+            <th>Adet</th>
+            <th>Fiyat</th>
+            <th>Toplam</th>
+            <th>Sil</th>
+        </tr>
+        @foreach (ShoppingCart item in Model)
+        {
+            <tr>
+                <td align="center">@item.ID</td>
+                <td>@item.Product.Name</td>
+                <td align="center">@item.Quantity</td>
+                <td align="center">@item.Product.Price</td>
+                <td align="center">
+                    @{ double total = item.Product.Price * item.Quantity;}
+                    @total
+                </td>
+                <td align="center">
+                    <a href="" class="deletebutton"><i class="fa fa-times"></i></a>
+                </td>
+            </tr>
+        }
+    </table>
+
+</div>
+<div class="totalBase">
+
+</div>
+<div style="clear:both"></div>
+
+

@@ -6,7 +6,7 @@
 @foreach (Product item in Model)
 {
     <div class="product">
-        <a href="" class="link">
+        <a href="@Url.Action("Detail", "Product", new {id= item.ID})" class="link">
             <div class="productImage">
                 @if (item.ProductImages.Count != 0)
                 {
@@ -26,7 +26,7 @@
                 }
             </div>
         </a>
-        <a href="" class="link">
+        <a href="@Url.Action("Detail", "Product", new {id= item.ID})" class="link">
             <div class="productInfo">
                 <h3 class="name"> @item.Name</h3>
                 <div class="category"> <small> Kategori: @item.category.Name</small><br /></div>

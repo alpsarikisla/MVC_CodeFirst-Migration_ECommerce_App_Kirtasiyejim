@@ -37,5 +37,7 @@ namespace KirtasiyejimWebApp.Models
         public double Stock { get; set; }
 
         public virtual ICollection<ProductImage> ProductImages { get; set; }
+
+        public virtual ICollection<ShoppingCart> ShoppingCarts { get; set; }
     }
 }

@@ -1,0 +1,55 @@
+﻿@model KirtasiyejimWebApp.Data.UserLoginViewModel
+@{
+    ViewBag.Title = "Üye Giriş";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="usercontainer">
+    <div class="userpanelTitle">
+        <a href="@Url.Action("Login","User")" class="titleitemactive">
+            Üye Giriş
+        </a>
+        <label class="titleitem">|</label>
+        <a href="@Url.Action("Register","User")" class="titleitem">
+            Üye Ol
+        </a>
+    </div>
+    <div class="userpanelContent">
+        @using (Html.BeginForm())
+        {
+            if (ViewBag.hataMesaj != null)
+            {
+                <div class="userpnl_uyari">
+                    @ViewBag.hataMesaj
+                </div>
+            }
+            <div class="row">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "formLabel" })
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "formTextbox", @placeholder = "ornek@ornek.com" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "formValidationText" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "formLabel" })
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "formTextbox", @placeholder = "şifreniz", @value = "1234" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "formValidationText" })
+            </div>
+            <div class="row">
+                @Html.LabelFor(model => model.RememberMe, htmlAttributes: new { @class = "chekLabel" })
+                @Html.EditorFor(model => model.RememberMe, new { htmlAttributes = new { @class = "formCheckBox" } })
+            </div>
+            <div class="row">
+                <button type="submit" class="LoginButton">Giriş Yap</button>
+            </div>
+            <div class="row" style="text-align:center;">
+                Hesabınız yok mu? <a href="@Url.Action("Register","User")">Üye Olun</a>
+            </div>
+        }
+    </div>
+
+</div>
+
+@section styles
+    {
+    <link href="~/Assets/css/userloginPage.css" rel="stylesheet" />
+    <link href="~/Assets/css/formControls.css" rel="stylesheet" />
+}

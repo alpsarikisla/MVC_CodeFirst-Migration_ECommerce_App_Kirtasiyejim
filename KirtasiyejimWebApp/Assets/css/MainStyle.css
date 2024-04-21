@@ -1,103 +1,249 @@
-﻿*{
-    margin:0; padding:0;
+﻿* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family:Calibri;
+    font-family: Calibri;
 }
+
 .topnavbar {
-    min-height:40px;
-   
+    min-height: 40px;
 }
-.container
-{
-    width:1400px;
-    margin:0px auto; 
+
+.container {
+    width: 1400px;
+    margin: 0px auto;
 }
+
 .navbar {
     min-height: 40px;
     background-color: steelblue;
 }
+
 .brand {
     float: left;
     padding: 15px;
-    padding-left:0;
+    padding-left: 0;
     color: steelblue;
-    text-decoration:none;
-    font-size:18pt;
+    text-decoration: none;
+    font-size: 18pt;
 }
+
 .motto {
     float: left;
     padding: 28px 0px;
     color: gray;
 }
+
 .userandcart {
-    width: 300px;
+    width: 320px;
     float: right;
     padding: 25px 0px;
 }
-.userandcart a{
-    text-decoration:none;
-    color:coral;
-    padding:7px;
-    border:1px solid coral;
-    border-radius:5px;
-    margin:0px 5px;
-}
-    .userandcart a:hover{
-        color:white;
-        background-color:coral;
+
+    .userandcart a {
+        text-decoration: none;
+        color: coral;
+        padding: 7px;
+        border: 1px solid coral;
+        border-radius: 5px;
+        margin: 0px 5px;
     }
-.navbar .container{
-    padding-top:10px;
+
+        .userandcart a:hover {
+            color: white;
+            background-color: coral;
+        }
+
+.navbar .container {
+    padding-top: 10px;
 }
-.navbar .container a {
-    padding-right:15px;
+
+    .navbar .container a {
+        padding-right: 15px;
+        text-decoration: none;
+        color: white;
+    }
+
+.product {
+    width: 191px;
+    padding: 10px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    margin: 10px;
     text-decoration: none;
-    color: white;
+    float: left;
 }
-.product{
-    width:191px;
-    padding:10px;
-    border:1px solid silver;
-    border-radius:5px;
-    margin:10px;
-    text-decoration:none;
-    float:left;
-}
-    .product .productImage img{
-        width:100%;
+
+    .product .productImage img {
+        width: 100%;
     }
+
     .product .link {
-        text-decoration:none;
+        text-decoration: none;
     }
-    .product .productInfo
-    {
-        color:dimgray;
+
+        .product .link:visited .name {
+            text-decoration: none;
+            color: rebeccapurple;
+        }
+
+    .product .productInfo {
+        color: dimgray;
     }
+
         .product .productInfo .name {
             padding: 10px 0;
         }
+
         .product .productInfo .category {
             border-top: 1px solid silver;
             border-bottom: 1px solid silver;
-            padding:10px 0;
+            padding: 10px 0;
         }
+
         .product .productInfo .price {
-            padding:15px 0 10px 0;
-            font-size:15pt;
-            font-weight:900;
-            color:black;
+            padding: 15px 0 10px 0;
+            font-size: 15pt;
+            font-weight: 900;
+            color: black;
         }
-        .product .cart {
-            margin-top: 10px;
-        }
-    .product .cart a {
-        display:block;
-        border-radius:3px;
-        color:white;
-        text-decoration:none;
-        padding:5px;
-        background-color:coral;
-        text-align:center;
+
+    .product .cart {
+        margin-top: 10px;
     }
+
+        .product .cart a {
+            display: block;
+            border-radius: 3px;
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            background-color: coral;
+            text-align: center;
+        }
+
+.productDetailBase {
+    float: left;
+    width: 980px;
+    border: 1px solid silver;
+    background-color: #F4F4F4;
+}
+
+    .productDetailBase .image {
+        float: left;
+        width: 480px;
+        background-color: white;
+    }
+
+        .productDetailBase .image .singleimage {
+            width: 460px;
+            margin: 10px;
+        }
+
+    .productDetailBase .imagelist {
+    }
+
+        .productDetailBase .imagelist img {
+            float: left;
+            margin: 5px;
+            border: 1px solid Silver;
+            width: 100px;
+        }
+
+    .productDetailBase .productDetail {
+        float: right;
+        width: 460px;
+        padding: 20px;
+    }
+
+        .productDetailBase .productDetail .productName {
+            padding: 20px 0;
+        }
+
+        .productDetailBase .productDetail .favlistbase {
+            padding: 15px 0;
+            border-bottom: 1px solid silver;
+            border-top: 1px solid silver;
+        }
+
+        .productDetailBase .productDetail .addcart {
+            padding: 15px 0;
+            border-bottom: 1px solid silver;
+            border-top: 1px solid silver;
+        }
+
+        .productDetailBase .productDetail .favlistbase a {
+            background-color: #4682B4;
+            padding: 7px 25px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .productDetailBase .productDetail .description {
+            color: dimgrey;
+            padding: 10px;
+        }
+
+        .productDetailBase .productDetail .quantity {
+            width: 50px;
+            padding: 7px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            border: 1px solid silver;
+        }
+
+        .productDetailBase .productDetail .addtocartbutton {
+            background-color: coral;
+            padding: 7px 25px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .productDetailBase .productDetail .addtocartbutton {
+            cursor: pointer;
+        }
+
+.commercialBase {
+    float: right;
+    width: 380px;
+    background-color: #FBE8CB;
+    height: 100px;
+}
+
+.cartDetailBase {
+    float: left;
+    width: 980px;
+    border: 1px solid silver;
+}
+
+    .cartDetailBase .carttable {
+        width: 100%;
+    }
+
+        .cartDetailBase .carttable tr {
+        }
+
+        .cartDetailBase .carttable th {
+            padding:10px 0px;
+            border-bottom:1px solid silver;
+            background-color:#f2f2f2
+        }
+
+        .cartDetailBase .carttable td {
+            padding: 10px 0px;
+            border-bottom: 1px solid silver;
+        }
+
+.totalBase {
+}
+.deletebutton{
+    color:orangered;
+    text-decoration:none;
+    font-weight:900;
+}

@@ -2175,6 +2175,8 @@
     <Content Include="Areas\AdminManagerPanel\Assets\plugins\fontawesome-6.5.1\svgs\solid\yen-sign.svg" />
     <Content Include="Areas\AdminManagerPanel\Assets\plugins\fontawesome-6.5.1\svgs\solid\yin-yang.svg" />
     <Content Include="Areas\AdminManagerPanel\Assets\plugins\fontawesome-6.5.1\svgs\solid\z.svg" />
+    <Content Include="Assets\css\formControls.css" />
+    <Content Include="Assets\css\userloginPage.css" />
     <Content Include="Assets\css\MainStyle.css" />
     <Content Include="Assets\plugins\fontawesome-6.5.1\css\all.css" />
     <Content Include="Assets\plugins\fontawesome-6.5.1\css\all.min.css" />
@@ -4264,6 +4266,10 @@
     <Compile Include="Areas\AdminManagerPanel\Data\ManagerLoginViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Data\UserLoginViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -4276,6 +4282,8 @@
     <Compile Include="Models\ManagerType.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductImage.cs" />
+    <Compile Include="Models\ShoppingCart.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -4404,6 +4412,9 @@
     <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Menu\_menuView.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

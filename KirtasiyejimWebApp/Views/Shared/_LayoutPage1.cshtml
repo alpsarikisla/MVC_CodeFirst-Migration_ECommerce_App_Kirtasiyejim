@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using KirtasiyejimWebApp.Models
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -6,23 +7,39 @@
     <title>kırtasiyejim - @ViewBag.Title * Her zaman uygun fiyatlı kırtasiye ürünleri *</title>
     <link href="~/Assets/css/MainStyle.css" rel="stylesheet" />
     <link href="~/Assets/plugins/fontawesome-6.5.1/css/all.min.css" rel="stylesheet" />
+    @RenderSection("styles", false)
 </head>
 <body>
     <div class="topnavbar">
         <div class="container">
             <a href="~/Home/Index" class="brand"> <h3>Kırtasiye-<span style="color:coral">jim</span></h3></a>
             <small class="motto">Her zaman uygun fiyatlı kırtasiye ürünleri</small>
-            <div class="userandcart">
-                <a href=""><i class="fa fa-user-plus"></i> Üye Ol</a>
-                <a href=""><i class="fa fa-user"></i> Giriş Yap</a>
-                <a href=""><i class="fa fa-shopping-cart"></i> Sepet</a>
-            </div>
+            @if (Session["user"] == null)
+            {
+                <div class="userandcart">
+                    <a href="@Url.Action("Register","User")"><i class="fa fa-user-plus"></i> Üye Ol</a>
+                    <a href="@Url.Action("Login","User")"><i class="fa fa-user"></i> Giriş Yap</a>
+                    <a href="@Url.Action("Index","ShoppingCart")"><i class="fa fa-shopping-cart"></i> Sepet (0)</a>
+                </div>
+            }
+            else
+            {
+                User u = Session["user"] as User;
+                KirtasiyejimDBModel db = new KirtasiyejimDBModel();
+                int count = db.ShoppingCarts.Count(x => x.User_ID == u.ID);
+
+                <div class="userandcart">
+                    <a href="@Url.Action("Index","ShoppingCart")"><i class="fa fa-shopping-cart"></i> Sepet (@count)</a>
+                    <a href="@Url.Action("Profile","User")">@u.Name @u.Surname</a>
+                    <a href="@Url.Action("LogOut","User")"> Çıkış</a>
+                </div>
+            }
             <div style="clear:both"></div>
         </div>
     </div>
     <div class="navbar">
         <div class="container">
-            @Html.Action("_menuView","Menu")
+            @Html.Action("_menuView", "Menu")
         </div>
     </div>
     <div class="container">

@@ -1,0 +1,54 @@
+﻿.usercontainer {
+    width: 420px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 20px;
+    min-height: 500px;
+    position: absolute;
+    Top: 50%;
+    Left: 50%;
+    Transform: translate(-50%, -50%);
+    -webkit-box-shadow: -1px 10px 22px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 10px 22px -8px rgba(0,0,0,0.75);
+    box-shadow: -1px 10px 22px -8px rgba(0,0,0,0.75);
+}
+.userpanelTitle {
+    text-align: center;
+    border-bottom: 2px solid #4682B4;
+    padding: 20px 0;
+}
+.userpanelContent {
+    padding: 20px 20px;
+}
+.userpnl_uyari
+{
+    background-color:#ff7d7d;
+    color:white;
+    font-size:12pt;
+    font-weight:900;
+    border-radius:7px;
+    padding:15px;
+    margin-bottom:10px;
+}
+.LoginButton {
+    border: 1px solid teal;
+    border-radius: 5px;
+    padding: 7px 15px;
+    background-color: #4682B4;
+    color: white;
+    font-size: 12pt;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+.titleitem{
+   padding:10px;
+   text-decoration:none;
+   color:dimgray;
+   font-size:15pt;
+}
+.titleitemactive {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15pt;
+}

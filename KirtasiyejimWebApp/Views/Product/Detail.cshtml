@@ -1,0 +1,49 @@
+﻿@model KirtasiyejimWebApp.Models.Product
+@using KirtasiyejimWebApp.Models
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<div style=" margin-top: 50px;"></div>
+<div class="productDetailBase">
+    <div class="image">
+        <img src="~/Assets/ProductImages/@ViewBag.CoverImage" class="singleimage" />
+        <div class="imagelist">
+            @foreach (ProductImage item in ViewBag.Images)
+            {
+                <img src="~/Assets/ProductImages/@item.ImageUrl" />
+            }
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <div class="productDetail">
+        Ürün Kodu: @Model.ID
+        <br />
+        Marka : <a href="@Url.Action("ProductWBrand","Products", new {id= Model.Brand_ID})">@Model.Brand.Name</a>
+        <br />
+        <h2 class="productName">@Model.Name</h2>
+        <div class="favlistbase">
+            <a href=""> <i class="fa-regular fa-heart"></i> Favorilere ekle</a>
+            <a href="" style="background-color: #FF7F50"> <i class="fa fa-list"></i> Koleksiyona Ekle</a>
+        </div>
+        <div class="addcart">
+            @using (Html.BeginForm("AddProduct", "ShoppingCart", FormMethod.Post))
+            {
+                <input type="text" class="quantity" name="quantity" value="1" />
+                <input name="id" type="text" class="quantity" value="@Model.ID" style="display:none" />
+                <button type="submit" class="addtocartbutton">Sepete Ekle</button>
+            }
+        </div>
+        <div class="description">
+            <h3>Ürün Özellikleri</h3>
+            <br />
+            @Model.Description
+        </div>
+    </div>
+    <div style="clear:both"></div>
+</div>
+<div class="commercialBase">
+
+</div>
+<div style="clear:both"></div>
+
