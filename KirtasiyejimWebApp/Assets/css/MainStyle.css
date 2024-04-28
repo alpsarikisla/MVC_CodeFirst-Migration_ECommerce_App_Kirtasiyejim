@@ -230,9 +230,9 @@ body {
         }
 
         .cartDetailBase .carttable th {
-            padding:10px 0px;
-            border-bottom:1px solid silver;
-            background-color:#f2f2f2
+            padding: 10px 0px;
+            border-bottom: 1px solid silver;
+            background-color: #f2f2f2
         }
 
         .cartDetailBase .carttable td {
@@ -241,9 +241,77 @@ body {
         }
 
 .totalBase {
+    width: 400px;
+    float: right;
 }
-.deletebutton{
-    color:orangered;
-    text-decoration:none;
-    font-weight:900;
+
+    .totalBase .title {
+        background-color: #EFEFEF;
+        border: 1px solid Silver;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        padding: 10px;
+    }
+
+    .totalBase .container {
+        width: 378px;
+        border: 1px solid Silver;
+        padding: 10px;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+
+.deletebutton {
+    color: orangered;
+    text-decoration: none;
+    font-weight: 900;
 }
+
+.goToPay {
+    background-color: #15cf2f;
+    padding: 7px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+}
+
+.cartDetailBase .title {
+    background-color: #EFEFEF;
+    border: 1px solid Silver;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    padding: 10px;
+}
+
+.cartDetailBase .container {
+    width: 980px;
+    padding: 10px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+    .cartDetailBase .container .left{
+        float:left;
+        width:440px;
+    }
+    .cartDetailBase .container .left img{
+        margin-top:10px;
+        width:100%
+    }
+        .cartDetailBase .container .right {
+        float: left;
+        width: 440px;
+        padding-left:40px;
+    }
+
+        .cartDetailBase .container .right .row {
+            padding-bottom: 20px;
+        }
+
+            .cartDetailBase .container .right .row .payinput {
+                padding: 10px;
+                border: 1px solid Silver;
+                border-radius: 7px;
+                width: 400px;
+            }

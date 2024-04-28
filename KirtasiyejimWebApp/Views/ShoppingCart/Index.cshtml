@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    double total = Model.Sum(x => x.Product.Price * x.Quantity);
 }
 
 <div style=" margin-top: 50px;"></div>
@@ -28,8 +29,8 @@
                 <td align="center">@item.Quantity</td>
                 <td align="center">@item.Product.Price</td>
                 <td align="center">
-                    @{ double total = item.Product.Price * item.Quantity;}
-                    @total
+                    @{ double subtotal = item.Product.Price * item.Quantity;}
+                    @subtotal
                 </td>
                 <td align="center">
                     <a href="" class="deletebutton"><i class="fa fa-times"></i></a>
@@ -40,7 +41,15 @@
 
 </div>
 <div class="totalBase">
-
+    <div class="title">
+        <h3>Toplam Ödenecek</h3>
+    </div>
+    <div class="container">
+        <label style="font-size:15pt;">Toplam = @total ₺</label>
+        <br />
+        <br />
+        <a href="@Url.Action("Index","Pay")" class="goToPay">Ödeme Ekranına Geç</a>
+    </div>
 </div>
 <div style="clear:both"></div>
 

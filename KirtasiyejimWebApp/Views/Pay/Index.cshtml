@@ -1,0 +1,60 @@
+﻿@model IEnumerable<KirtasiyejimWebApp.Models.ShoppingCart>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    double total = Model.Sum(x => x.Product.Price * x.Quantity);
+}
+
+<div style=" margin-top: 50px;"></div>
+<h2>Sepetiniz</h2>
+<hr />
+<div style=" margin-top: 20px;"></div>
+<div class="cartDetailBase">
+    <div class="title">
+        <h3>Kart Bilgileri</h3>
+    </div>
+    <div class="container">
+        @using (Html.BeginForm())
+        {
+            <div class="left">
+                <img src="~/Assets/SiteImages/vecteezy_credit-card-clipart-design-illustration_9384393.png" />
+            </div>
+            <div class="right">
+                <div class="row">
+                    Kart Üzerindeki İsim
+                    <br />
+                    <input name="name" type="text" class="payinput" />
+                </div>
+                <div class="row">
+                    Kart Numarası
+                    <br />
+                    <input name="cardnumber" type="text" class="payinput" placeholder="---- ---- ---- ----" />
+                </div>
+                <div class="row">
+                    Son Kullanma Ay / Yıl
+                    <br />
+                    <input type="text" name="reqmonth" class="payinput" placeholder="--" style="width:100px;" />/
+                    <input type="text" name="reqyear" class="payinput" placeholder="--" style="width:100px;" />
+                </div>
+                <div class="row">
+                    CVV
+                    <br />
+                    <input type="text" name="cvv" class="payinput" placeholder="---" style="width:100px;" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="totalBase">
+    <div class="title">
+        <h3>Toplam Ödenecek</h3>
+    </div>
+    <div class="container">
+        <label style="font-size:15pt;">Toplam = @total ₺</label>
+        <br />
+        <br />
+        <a href="" class="goToPay">Güvenli Ödeme Yap</a>
+    </div>
+</div>
+<div style="clear:both"></div>
+<img src="~/Assets/SiteImages/banks.png" width="1400" />

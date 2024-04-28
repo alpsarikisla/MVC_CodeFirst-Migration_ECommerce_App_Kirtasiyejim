@@ -4252,6 +4252,8 @@
     <Content Include="Assets\plugins\fontawesome-6.5.1\svgs\solid\yin-yang.svg" />
     <Content Include="Assets\plugins\fontawesome-6.5.1\svgs\solid\z.svg" />
     <Content Include="Assets\ProductImages\none.png" />
+    <Content Include="Assets\SiteImages\banks.png" />
+    <Content Include="Assets\SiteImages\vecteezy_credit-card-clipart-design-illustration_9384393.png" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -4266,6 +4268,7 @@
     <Compile Include="Areas\AdminManagerPanel\Data\ManagerLoginViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\PayController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -4415,6 +4418,7 @@
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\Pay\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
