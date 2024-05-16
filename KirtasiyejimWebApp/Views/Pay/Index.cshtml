@@ -9,17 +9,24 @@
 <h2>Sepetiniz</h2>
 <hr />
 <div style=" margin-top: 20px;"></div>
-<div class="cartDetailBase">
-    <div class="title">
-        <h3>Kart Bilgileri</h3>
-    </div>
-    <div class="container">
-        @using (Html.BeginForm())
-        {
+@using (Html.BeginForm())
+{
+    <div class="cartDetailBase">
+        <div class="title">
+            <h3>Kart Bilgileri</h3>
+        </div>
+        <div class="container">
+
             <div class="left">
                 <img src="~/Assets/SiteImages/vecteezy_credit-card-clipart-design-illustration_9384393.png" />
             </div>
             <div class="right">
+                @if (ViewBag.message != null)
+                {
+                    <div class="row">
+                        <label style="color:red">@ViewBag.message</label>
+                    </div>
+                }
                 <div class="row">
                     Kart Üzerindeki İsim
                     <br />
@@ -42,19 +49,20 @@
                     <input type="text" name="cvv" class="payinput" placeholder="---" style="width:100px;" />
                 </div>
             </div>
-        }
+
+        </div>
     </div>
-</div>
-<div class="totalBase">
-    <div class="title">
-        <h3>Toplam Ödenecek</h3>
+    <div class="totalBase">
+        <div class="title">
+            <h3>Toplam Ödenecek</h3>
+        </div>
+        <div class="container">
+            <label style="font-size:15pt;">Toplam = @total ₺</label>
+            <br />
+            <br />
+            <input type="submit" class="goToPay" value="Güvenli Ödeme Yap" />
+        </div>
     </div>
-    <div class="container">
-        <label style="font-size:15pt;">Toplam = @total ₺</label>
-        <br />
-        <br />
-        <a href="" class="goToPay">Güvenli Ödeme Yap</a>
-    </div>
-</div>
+}
 <div style="clear:both"></div>
 <img src="~/Assets/SiteImages/banks.png" width="1400" />
